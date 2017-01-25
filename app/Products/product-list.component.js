@@ -12,6 +12,10 @@ var core_1 = require("@angular/core");
 var ProductListComponent = (function () {
     function ProductListComponent() {
         this.pageTitle = 'Product list!';
+        this.imageWidth = 50;
+        this.imageMargin = 2;
+        this.showImage = false;
+        this.listFilter = 'cart';
         this.products = [
             {
                 "productId": 1,
@@ -35,6 +39,9 @@ var ProductListComponent = (function () {
             }
         ];
     }
+    ProductListComponent.prototype.toggleImage = function () {
+        this.showImage = !this.showImage;
+    };
     return ProductListComponent;
 }());
 ProductListComponent = __decorate([
